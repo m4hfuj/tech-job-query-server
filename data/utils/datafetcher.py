@@ -8,7 +8,7 @@ import warnings
 # import sqlite3
 # import mysql.connector
 
-from .firebase import *
+from .firebase import get_data_bdjobs
 
 warnings.filterwarnings("ignore")
 
@@ -138,7 +138,7 @@ class DataFetcher:
 
 
     def get_dataframe(self, job_class="All Technical Jobs"):
-        results = get_data()
+        results = get_data_bdjobs()
         # print(results)
 
         print("Job class-", job_class)

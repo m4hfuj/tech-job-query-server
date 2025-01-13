@@ -10,13 +10,15 @@ firebase_admin.initialize_app(cred, {
 })
 
 
-def insert_data(data):
-    db.reference("/jobs").push().set(data)
+def insert_data_bdjobs(data):
+    # db.reference("/jobs").push().set(data)
+    url = data['job_url'].split("id")[1][1:]
+    db.reference(f"/bdjobs/{url}").set(data)
     print("Successfull!!")
 
 
-def get_data():
-    data = db.reference("/jobs").get()
+def get_data_bdjobs():
+    data = db.reference("/bdjobs").get()
     # return data
     # data = get_data()
 
@@ -29,3 +31,4 @@ def get_data():
     
     else:
         print("No data found!")
+

@@ -5,11 +5,10 @@ import time
 import requests
 # import sys
 import pandas as pd
-# import mysql.connector
-# import sqlite3
+
 
 from data.utils.jobclassifier import JobClassifier
-from data.utils.firebase import *
+from data.utils.firebase import insert_data_bdjobs
 
 
 columns = [
@@ -133,8 +132,8 @@ class BDJobsScrapper:
                     # self.conn.commit()
                     # print()
                     # print("Insertion Successfull.")
-                    insert_data(results)
-                    print(self.cursor.rowcount, "record inserted.")
+                    insert_data_bdjobs(results)
+                    print("record inserted.")
                     # print()
                 except Exception as e:
                     print(f"Exception {e}")
@@ -266,5 +265,5 @@ class BDJobsScrapper:
 
 
 scrapper = BDJobsScrapper()
-scrapper.pages = [1,2,3,4,5,6,7,8,9,10]
+scrapper.pages = [3,4,5,6,7,8,9,10]
 scrapper.scrap()

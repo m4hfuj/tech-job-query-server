@@ -13,6 +13,7 @@ data_fetcher = DataFetcher(job_class="All Technical Jobs")
 # print(data_fetcher)
 
 df = data_fetcher.get_dataframe(job_class="All Technical Jobs")
+df.to_csv("data.csv")
 
 # Role options
 options = ['All Technical Jobs']
