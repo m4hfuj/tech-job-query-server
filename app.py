@@ -19,6 +19,17 @@ options = ['All Technical Jobs']
 options.extend(df.job_domain.unique().tolist())
 
 
+@app.route("/")
+def home():
+    return '''
+<a href="https://example.com" target="_blank">Welcome to the Flask app! Click here to visit our website!</a>
+
+/api/role_options
+
+'''
+
+
+
 @app.route('/api/role_options', methods=['GET'])
 def get_role_options():
     return jsonify(options)
