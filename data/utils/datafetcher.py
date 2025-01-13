@@ -3,10 +3,10 @@ import ast
 import numpy as np
 import pandas as pd
 from collections import Counter
-import pickle
+# import pickle
 import warnings
-import sqlite3
-import mysql.connector
+# import sqlite3
+# import mysql.connector
 
 from .firebase import *
 
