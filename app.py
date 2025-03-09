@@ -27,6 +27,8 @@ def home():
 
 /api/role_options
 
+/api/all_data
+
 '''
 
 

@@ -4,7 +4,7 @@ from firebase_admin import credentials, db
 import pandas as pd
 
 
-cred = credentials.Certificate("credentials.json")
+cred = credentials.Certificate("/etc/secrets/credentials.json")
 firebase_admin.initialize_app(cred, {
   'databaseURL': 'https://job-list-c5296-default-rtdb.asia-southeast1.firebasedatabase.app/'
 })
