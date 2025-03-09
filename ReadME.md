@@ -2,6 +2,8 @@
 
 A smart Flask-based REST API that analyzes tech job listings in Bangladesh, providing insights about job requirements, skills, and qualifications.
 
+Live Website: https://techjobquery.netlify.app/
+
 ## ✨ Features
 
 - 🤖 Job domain classification using AI (FLAN-T5 model)  
